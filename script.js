@@ -5,16 +5,10 @@ console.log("Hello world!")
 var burger = 0
 var chicken = 0
 var iceCream = 0
-var money = 0
-var name = ""
 const OUTPUT = document.getElementById("JavaScriptOutput");
 
 
 // Main Code
-
-
-
-
 
 
 

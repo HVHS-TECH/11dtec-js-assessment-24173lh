@@ -29,3 +29,16 @@ function clearOrder() {
   localStorage.clear();
   OUTPUT.innerHTML = "Order cleared";
 }
+
+var OUTPUT = document.getElementById("DetailsOutput");
+
+const NAME_FIELD = document.getElementById("nameField");
+let userName = String(NAME_FIELD.value);
+const MONEY_FIELD = document.getElementById("moneyField");
+let userMoney = Number(MONEY_FIELD.value);
+
+OUTPUT.innerHTML += "<br><b>" + userMoney + "<br>" + userName
+
+
+
+
