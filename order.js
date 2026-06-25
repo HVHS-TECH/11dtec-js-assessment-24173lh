@@ -1,4 +1,8 @@
+document.querySelector("#DetailsOutput").style.visibility = 'hidden';
+
 // Variables
+
+var menuItems = ["Cheeseburgers", "Fried Chicken", "Ice Creams"];
 
 var money = 0
 var name = ""
@@ -19,8 +23,12 @@ total = iceCream*3 + burger*6 + chicken*5
 
 //Main Code
 
-OUTPUT.innerHTML = "Cheeseburgers: " + burger + "<br>Fried Chicken: " + chicken + "<br>Ice Creams: " + iceCream;
-OUTPUT.innerHTML += "<br><b>Total: </b>$ " + total
+OUTPUT.innerHTML =
+menuItems[0] + ": " + burger + " ($" + burger * 6 + ")" +
+"<br>" +
+menuItems[1] + ": " + chicken + " ($" + chicken * 5 + ")" +
+"<br>" +
+menuItems[2] + ": " + iceCream + " ($" + iceCream * 3 + ")";OUTPUT.innerHTML += "<br><b>Total: </b>$" + total
 
 
 //Functions
@@ -30,15 +38,19 @@ function clearOrder() {
   OUTPUT.innerHTML = "Order cleared";
 }
 
-var OUTPUT = document.getElementById("DetailsOutput");
+function getFormInput() {
+  document.querySelector("#DetailsOutput").style.visibility = "visible";
+  var detailsOutput = document.getElementById("DetailsOutput");
+  var userName = document.getElementById("nameField").value;
+  var userMoney = Number(document.getElementById("moneyField").value);
+  if (userMoney>0) {
+    if (userMoney<total) {
+      detailsOutput.innerHTML = "Sorry, you can't afford this.";
 
-const NAME_FIELD = document.getElementById("nameField");
-let userName = String(NAME_FIELD.value);
-const MONEY_FIELD = document.getElementById("moneyField");
-let userMoney = Number(MONEY_FIELD.value);
+  } else {
+    detailsOutput.innerHTML = "<h1>Receipt:</h1> Name: " + userName + "<br>Money: $" + userMoney + "<br>Total: $" + total + "<br>Change: $" + (userMoney-total);
+  }
+  
+}
 
-OUTPUT.innerHTML += "<br><b>" + userMoney + "<br>" + userName
-
-
-
-
+}

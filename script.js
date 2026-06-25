@@ -15,6 +15,7 @@ const OUTPUT = document.getElementById("JavaScriptOutput");
 // functions
 
 function addIceCream(){
+
 iceCream ++;
 localStorage.setItem("iceCream", iceCream);
 OUTPUT.innerHTML = "Ice Cream added to order"
