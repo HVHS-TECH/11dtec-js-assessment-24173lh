@@ -158,8 +158,8 @@ margin-top: 30px;
 }
 
 #DetailsOutput{
-grid-column-start: 3;
-grid-column-end: 5;
+grid-column-start: 4;
+grid-column-end: 7;
 grid-row-start: 1;
 grid-row-end: 2;  
 background-color: lightblue;  
