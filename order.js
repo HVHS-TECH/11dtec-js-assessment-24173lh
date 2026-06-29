@@ -48,17 +48,17 @@ if (iceCream>0) {
 //Functions
 
 function AmountChicken(){
-AmountOfChicken = "Chicken x" + chicken;
+AmountOfChicken = "Chicken x" + chicken + "<br>";
 return AmountOfChicken
 }
 
 function AmountBurger(){
-AmountOfBurgers = "Burger x" + burger;
+AmountOfBurgers = "Burger x" + burger + "<br>";
 return AmountOfBurgers
 }
 
 function AmountIceCream(){
-AmountOfIceCream = "Ice Cream x" + iceCream;
+AmountOfIceCream = "Ice Cream x" + iceCream + "<br>";
 return AmountOfIceCream
 }
 
@@ -75,10 +75,10 @@ function getFormInput() {
   var userMoney = Number(document.getElementById("moneyField").value);
   if (userMoney>0) {
     if (userMoney<total) {
-      detailsOutput.innerHTML = "You are a fat chud get a job you fatty.";
+      detailsOutput.innerHTML = "You are fat get a job you fatty. (Not enough money)";
 
   } else {
-    detailsOutput.innerHTML = "<h1>Receipt:</h1> Name: " + userName + "<br>Money: $" + userMoney + "<br>" + AmountOfChicken + "<br>" + AmountOfIceCream + "<br>" + AmountOfBurgers + "<br>Total: $" + total + "<br>Change: $" + (userMoney-total) + "<br>";
+    detailsOutput.innerHTML = "<h1>Receipt:</h1> Name: " + userName + "<br>Money: $" + userMoney + "<br>" + AmountOfChicken +  AmountOfIceCream + AmountOfBurgers + "<br><b>Total: </b>$" + total + "<br>Change: $" + (userMoney-total) + "<br>";
   }
   
 }

@@ -1,6 +1,3 @@
-console.log("Hello world!")
-
-
 // Variables
 var burger = 0
 var chicken = 0
