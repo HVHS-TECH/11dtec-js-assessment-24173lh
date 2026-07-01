@@ -1,7 +1,7 @@
 // Variables
-var burger = 0
-var chicken = 0
-var iceCream = 0
+var burger = Number(localStorage.getItem("burger")) || 0;
+var chicken = Number(localStorage.getItem("chicken")) || 0;
+var iceCream = Number(localStorage.getItem("iceCream")) || 0;
 const OUTPUT = document.getElementById("JavaScriptOutput");
 
 

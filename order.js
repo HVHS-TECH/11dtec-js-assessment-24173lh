@@ -31,11 +31,11 @@ total = iceCream*3 + burger*6 + chicken*5
 //Main Code
 
 OUTPUT.innerHTML =
-menuItems[0] + ": " + burger + " ($" + burger * 6 + ")" +
-"<br>" +
+
 menuItems[1] + ": " + chicken + " ($" + chicken * 5 + ")" +
 "<br>" +
-menuItems[2] + ": " + iceCream + " ($" + iceCream * 3 + ")";OUTPUT.innerHTML += "<br><b>Total: </b>$" + total
+menuItems[2] + ": " + iceCream + " ($" + iceCream * 3 + ")" + "<br>" + menuItems[0] + ": " + burger + " ($" + burger * 6 + ")"; 
+OUTPUT.innerHTML += "<br><b>Total: </b>$" + total
 
 if (chicken>0) {
   AmountChicken()} else AmountOfChicken = "";
@@ -78,7 +78,7 @@ function getFormInput() {
       detailsOutput.innerHTML = "You are fat get a job you fatty. (Not enough money)";
 
   } else {
-    detailsOutput.innerHTML = "<h1>Receipt:</h1> Name: " + userName + "<br>Money: $" + userMoney + "<br>" + AmountOfChicken +  AmountOfIceCream + AmountOfBurgers + "<br><b>Total: </b>$" + total + "<br>Change: $" + (userMoney-total) + "<br>";
+    detailsOutput.innerHTML = "<h1>Receipt:</h1> Name: " + userName + "<br>Money: $" + userMoney + "<br>" + AmountOfChicken +  AmountOfIceCream + AmountOfBurgers + "<b>Total: </b>$" + total + "<br>Change: $" + (userMoney-total) + "<br>";
   }
   
 }
