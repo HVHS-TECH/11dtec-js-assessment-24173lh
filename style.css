@@ -9,6 +9,14 @@ form input{
 color: black;
 }
 
+body {
+    background-color: white;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s;
+}
+
 
 .container-nav{
 display:grid;
