@@ -6,22 +6,24 @@ const OUTPUT = document.getElementById("JavaScriptOutput");
 const images = ["images/burgerman.png","images/chickenman.png","images/icecreamwoman.png"];
 let current = 0;
 
+
 // Main Code
 
-
-
-function changeBackground() {
-    document.body.style.backgroundImage = "url(" + images[current] + ")";
-    current = (current + 1) % images.length;
-}
+// changing background
 
 changeBackground();
 
 setInterval(changeBackground, 5000);
 
 
-
 // functions
+
+function changeBackground() {
+    document.body.style.backgroundImage = "url(" + images[current] + ")";
+    current = (current + 1) % images.length;
+}
+
+// Adding items to local storage
 
 function addIceCream(){
 

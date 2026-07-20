@@ -1,32 +1,27 @@
 document.querySelector("#DetailsOutput").style.visibility = 'hidden';
 
-// Variables
+//variables
 
 var menuItems = ["Cheeseburgers", "Fried Chicken", "Ice Creams"];
-
 var money = 0
 var name = ""
-var total
+var total = iceCream*3 + burger*6 + chicken*5
 
+// getting items from script.js
 var burger = localStorage.getItem("burger");
 if (burger == null) { burger = 0; }
-
 var chicken = localStorage.getItem("chicken");
 if (chicken == null) { chicken = 0; }
-
 var iceCream = localStorage.getItem("iceCream");
 if (iceCream == null) { iceCream = 0; }
 
-var OUTPUT = document.getElementById("JavaScriptOutput");
+const OUTPUT = document.getElementById("JavaScriptOutput");
 
 var AmountOfChicken
-
 var AmountOfBurgers
-
 var AmountOfIceCream
 
 
-total = iceCream*3 + burger*6 + chicken*5
 
 //Main Code
 
@@ -67,7 +62,7 @@ function clearOrder() {
   OUTPUT.innerHTML = "Order cleared";
 }
 
-
+// getting results from form and displaying receipt/"not enough money"
 function getFormInput() {
   document.querySelector("#DetailsOutput").style.visibility = "visible";
   var detailsOutput = document.getElementById("DetailsOutput");
@@ -75,7 +70,7 @@ function getFormInput() {
   var userMoney = Number(document.getElementById("moneyField").value);
   if (userMoney>0) {
     if (userMoney<total) {
-      detailsOutput.innerHTML = "You are fat get a job you fatty. (Not enough money)";
+      detailsOutput.innerHTML = "Not enough money";
 
   } else {
     detailsOutput.innerHTML = "<h1>Receipt:</h1> Name: " + userName + "<br>Money: $" + userMoney + "<br>" + AmountOfChicken +  AmountOfIceCream + AmountOfBurgers + "<b>Total: </b>$" + total + "<br>Change: $" + (userMoney-total) + "<br>";
