@@ -6,7 +6,6 @@ const OUTPUT = document.getElementById("JavaScriptOutput");
 const images = ["images/burgerman.png","images/chickenman.png","images/icecreamwoman.png"];
 let current = 0;
 
-
 // Main Code
 
 // changing background
@@ -32,6 +31,8 @@ localStorage.setItem("iceCream", iceCream);
 OUTPUT.innerHTML = "Ice Cream added to order"
 setTimeout(function() { OUTPUT.innerHTML = ""; }, 1000);
 }
+
+
 
 function addBurger(){
 burger ++;

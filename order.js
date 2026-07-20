@@ -1,11 +1,11 @@
 document.querySelector("#DetailsOutput").style.visibility = 'hidden';
 
-//variables
+// variables
 
 var menuItems = ["Cheeseburgers", "Fried Chicken", "Ice Creams"];
 var money = 0
 var name = ""
-var total = iceCream*3 + burger*6 + chicken*5
+var total 
 
 // getting items from script.js
 var burger = localStorage.getItem("burger");
@@ -21,7 +21,7 @@ var AmountOfChicken
 var AmountOfBurgers
 var AmountOfIceCream
 
-
+total = iceCream*3 + burger*6 + chicken*5
 
 //Main Code
 
